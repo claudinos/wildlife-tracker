@@ -3,9 +3,11 @@ import spark.ModelAndView;
 import spark.Spark;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
 
 import static spark.Spark.*;
 
@@ -33,13 +35,22 @@ public class App {
 
             req.session().attribute("item",newAnimal);
             model.put("item",req.session().attribute("item"));
-            return new ModelAndView(model,"successm.hbs");
+            System.out.println(newAnimal);
+            return new ModelAndView(model,"success.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/animals", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
+
+        get("/list", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            List<Animals> animalsList= Animals.all();
+            model.put("animalsList", animalsList);
+            return new ModelAndView(model, "successm.hbs");
+        }, new HandlebarsTemplateEngine());
+
 
     }
 

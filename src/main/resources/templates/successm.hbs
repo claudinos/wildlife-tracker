@@ -1,0 +1,18 @@
+{{#partial "content"}}
+{{#if animalsList}}
+               {{#each animalsList}}
+
+                  <p>{{name}}</p>
+                  <p>{{health}}</p>
+                  <p>{{age}}</p>
+                  <p>{{endangered}}</p>
+
+
+               {{/each}}
+
+
+           {{else}}
+              <p>no animals</p>
+           {{/if}}
+{{/partial}}
+{{> layout.hbs}}

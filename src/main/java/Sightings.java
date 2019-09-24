@@ -46,7 +46,7 @@ public class Sightings {
     public static List< Sightings > all() {
         String sql = "SELECT * FROM  Sightings ";
         try(Connection con = DB.sql2o.open()) {
-            return con.createQuery(sql).executeAndFetch( Sightings .class);
+            return con.createQuery(sql).executeAndFetch( Sightings.class);
         }
     }
 }
