@@ -1,0 +1,66 @@
+
+ {{#partial "content"}}
+     <section class="landing-pg">
+         <div class="land-left"></div>
+         <div class="land-right"></div>
+         <form class="form" action="/newAnimal" method="post">
+           <h1 id="header">WILDLIFE TRACKER</h1>
+               <div class="form-group">
+                                   <label> Ranger</label>
+                                   <input type="text" id="ranger" name="ranger" class="form-control" placeholder="Ranger Name">
+                               </div>
+                               <div class="form-group">
+                                   <label>Type of animal</label>
+                                   <input type="text" id="animal" name="animal" class="form-control" placeholder="Animal spotted">
+                               </div>
+                               <div class="form-group">
+                                   <label>Endangered?</label>
+                                   <br>
+                                   <label>
+                                       <input type="radio" value="Yes" name="endangered" id="endangered">
+                                       <span for="yes">Yes</span>
+                                   </label>
+                                   <br>
+                                   <label>
+                                       <input type="radio" value="No" name="endangered" id="endangered">
+                                       <span for="no">No</span>
+                                   </label>
+                               </div>
+                               <label>Location:</label>
+                               <br>
+                               <select name="location">
+                                   <option label=""></option>
+                                   <div id="location">
+                                   <option value="Zone A">Zone A</option>
+                                   <option value="Zone B">Zone B</option>
+                                   <option value="Zone C">Zone C</option>
+                                   <option value="Zone D">Zone D</option>
+                                   </div>
+                               </select>
+                               <br>
+                               <br>
+                               <label>Animal's Health:</label><br>
+                               <select name="health">
+                                   <option label=""></option>
+                                   <option value="Ill">ill</option>
+                                   <option value="Healthy">Healthy</option>
+                                   <option value="Okay">Okay</option>
+                               </select>
+                               <br>
+                               <br>
+                               <div class="form-group">
+                                   <label>Age</label>
+                                   <br>
+                                   <select name="age">
+                                       <option label=""></option>
+                                       <option value="Newborn">Newborn</option>
+                                       <option value="Young">Young</option>
+                                       <option value="Adult">Adult</option>
+                                   </select>
+                               </div>
+             <input class="btns" type="submit">
+         </form>
+     </section>
+ {{/partial}}
+ {{> layout.hbs}}
+

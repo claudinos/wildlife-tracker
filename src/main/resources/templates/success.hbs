@@ -1,0 +1,32 @@
+{{#partial "content"}}
+    <section class="landing-pg">
+        <div class="land-left">
+        </div>
+        <div class="land-right">
+        </div>
+
+        <div class="success">
+
+{{#if item}}
+               {{#each item}}
+
+                  <p>{{name}}</p>
+                  <p>{{health}}</p>
+                  <p>{{age}}</p>
+                  <p>{{endangered}}</p>
+
+
+               {{/each}}
+
+
+           {{else}}
+              <p>no animals</p>
+           {{/if}}
+
+
+        </div>
+
+
+    </section>
+{{/partial}}
+{{> layout.hbs}}

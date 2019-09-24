@@ -1,0 +1,47 @@
+nav{
+  position: absolute;
+  top: 23px;
+  right: 10%;
+  font-family: 'Abel', sans-serif;
+
+}
+nav>ul li{
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 1em;
+  color: black;
+  cursor: pointer;
+}
+
+.form{
+  position: relative;
+  width: 400px;
+  margin-top: 15px;
+  color: black;
+}
+.form>h1{
+  color: aliceblue;
+  font-size: 2.3em;
+}
+.form>input[type=text],
+.form>input[type=number]{
+  background: none;
+  width: 400px;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid white;
+  color: aliceblue;
+  outline: none;
+  display: block;
+  font-size: 1em;
+}
+
+.form input[type=submit]{
+  margin-top: 10px;
+  background:silver;
+  width: 100%;
+  padding: 5px;
+  color: white;
+  font-size: 20px
+}
