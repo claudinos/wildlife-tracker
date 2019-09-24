@@ -3,20 +3,20 @@ import org.sql2o.Connection;
 import java.util.List;
 
 public class Sightings {
-    private String ranger;
+    private String rangerName;
     private String location;
     private int animal_id;
     private String date_sighted;
     private int id;
 
     public Sightings (String ranger, String location, int animal_id){
-        this.ranger = ranger;
+        this.rangerName = ranger;
         this.location = location;
         this.animal_id = animal_id;
     }
 
-    public String getRanger(){
-        return ranger;
+    public String getRangerName(){
+        return rangerName;
     }
 
     public String getLocation(){
@@ -30,11 +30,12 @@ public class Sightings {
     public int getId(){
         return id;
     }
+
     public void save() {
         try(Connection con = DB.sql2o.open()) {
             String sql = "INSERT INTO Sightings (ranger,location,animal_id) VALUES (:ranger, :location, :animal_id)";
-            con.createQuery(sql)
-                    .addParameter("ranger", this.ranger)
+            this.id=(int) con.createQuery(sql,true)
+                    .addParameter("ranger", this.rangerName)
                     .addParameter("location", this.location)
                     .addParameter("animal_id", this.animal_id)
                     .executeUpdate()

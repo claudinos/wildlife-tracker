@@ -32,7 +32,6 @@ public class App {
             String endangered = req.queryParams("endangered");
            Animals newAnimal = new Animals(name,health,age,endangered);
            newAnimal.save();
-
             req.session().attribute("item",newAnimal);
             model.put("item",req.session().attribute("item"));
             System.out.println(newAnimal);
@@ -51,7 +50,24 @@ public class App {
             return new ModelAndView(model, "successm.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/new", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "sighting-form.hbs");
+        }, new HandlebarsTemplateEngine());
 
+        post("/new",(req,res)-> {
+            Map<String, Object> model = new HashMap<>();
+            int animal_id=Integer.parseInt(req.queryParams("animal_id"));
+            String rangerName = req.queryParams("rangerName");
+            String location = req.queryParams("location");
+
+            Sightings newSightings = new Sightings(rangerName,location,animal_id);
+            newSightings .save();
+            req.session().attribute("item",newSightings );
+            model.put("item",req.session().attribute("item"));
+            System.out.println(newSightings );
+            return new ModelAndView(model,"success.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 
 
