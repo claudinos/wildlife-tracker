@@ -1,12 +1,19 @@
- <h1>SIGHTINGS</h1>
 
-           <form class="form" action="/new" method="post">
-             <label for="content">Animal</label>
-                <input type="number" placeholder="EndangeredAnimal" name="animal_id" required>
-                <label for="content">rangerName</label>
-               <input type="text" placeholder="rangerName" name="rangerName" required>
-               <label for="content">location</label>
-               <input type="text" placeholder="location" name="location" required>
+        {{#partial "content"}}
+       <div class="well" >
+          <h1>SIGHTINGS</h1>
+            <form class="form" action="/new" method="post">
+                   <label for="content">Animal</label><br>
+                   <input type="number" placeholder="animal_id" name="animal_id" required><br>
+                   <label for="content">rangerName</label><br>
+                   <input type="text" placeholder="rangerName" name="rangerName" required><br>
+                   <label for="content">location</label><br>
+                   <input type="text" placeholder="location" name="location" required><br><br>
 
-               <input type="submit" class="btns">
-           </form>
+                   <input type="submit" class="btns">
+             </form>
+             <link rel='stylesheet' href='/App.css'>
+        </div>
+         {{/partial}}
+         {{> layout.hbs}}
+

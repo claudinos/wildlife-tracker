@@ -15,11 +15,13 @@ import static spark.Spark.*;
 public class App {
     public static void main(String[] args) {
         staticFileLocation("/public");
-//get("/newAnimal",(req, res) ->{
-//            Map<String, Object> model = new HashMap<>();
-//            return new ModelAndView(model, "animal-form.hbs");
-//        }, new HandlebarsTemplateEngine());
+
         get("/", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "index.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/newAnimal", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "animal-form.hbs");
         }, new HandlebarsTemplateEngine());
@@ -60,7 +62,6 @@ public class App {
             int animal_id=Integer.parseInt(req.queryParams("animal_id"));
             String rangerName = req.queryParams("rangerName");
             String location = req.queryParams("location");
-
             Sightings newSightings = new Sightings(rangerName,location,animal_id);
             newSightings .save();
             req.session().attribute("item",newSightings );

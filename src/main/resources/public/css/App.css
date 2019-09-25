@@ -12,29 +12,30 @@ nav>ul li{
   color: white;
   cursor: pointer;
 }
-
 .form{
   position: relative;
-  width: 400px;
-  margin-top: 15px;
+  width: 200px;
+
+  margin-top: 5px;
   color: white;
+  margin-right:15px;
+   padding-bottom:20px;
 }
-.form>h1{
-  color: white;
-  font-size: 2.3em;
-}
+
 .form>input[type=text],
 .form>input[type=number]{
   background: none;
-  width: 400px;
-  padding: 10px;
+  width: 200px;
+  padding:1px;
   margin: 10px 0;
   border: none;
   border-bottom: 1px solid white;
-  color: white;
+  color: black;
   outline: none;
   display: block;
   font-size: 1em;
+
+
 }
 
 .form input[type=submit]{
@@ -42,11 +43,27 @@ nav>ul li{
   background:silver;
   width: 100%;
   padding: 5px;
-  color: white;
+  color: black;
   font-size: 20px
 }
  body{
-        background-image:url('/images/TheJungle.jpg');
-        background-repeat:no-repeat;
-        background-size:cover;
-        }
+   background-image:url('/images/wolves.jpg');
+   background-repeat:no-repeat;
+   background-size:cover;
+ }
+
+.well{
+background-color:silver;
+ margin-top:100px;
+ margin-left:30px;
+ width:300px;
+}
+.jumbotron{
+ margin-top:140px;
+ color:black;
+ font-size: 20px;
+ text-align: center;
+  margin-left:120px;
+  margin-right:120px;
+  opacity:0.5;
+  }
