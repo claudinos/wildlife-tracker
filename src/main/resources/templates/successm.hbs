@@ -1,18 +1,27 @@
 {{#partial "content"}}
+<div class="first">
+<h1> ALL ANIMALS</h1>
+<table class="table table-bordered">
+
+   <th scope="col">Animal  Name</th>
+   <th scope="col">Animal Healthy</th>
+   <th scope="col">Animal Age</th>
+   <th scope="col">endangered</th>
 {{#if animalsList}}
                {{#each animalsList}}
+   <tr>
 
-                  <p>{{name}}</p>
-                  <p>{{health}}</p>
-                  <p>{{age}}</p>
-                  <p>{{endangered}}</p>
+       <td class="table-success">{{name}}</td>
+       <td class="table-success">{{health}}</td>
+       <td class="table-success">{{age}}</td>
+       <td class="table-success">{{endangered}}</td>
+   </tr>
+{{/each}}
+{{else}}
+   <p>No animal is found</p>
+{{/if}}
+</table>
+</div>
 
-
-               {{/each}}
-
-
-           {{else}}
-              <p>no animals</p>
-           {{/if}}
 {{/partial}}
-{{> layout.hbs}}
+{{>layout.hbs}}

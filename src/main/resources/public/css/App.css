@@ -50,6 +50,7 @@ nav>ul li{
    background-image:url('/images/wolves.jpg');
    background-repeat:no-repeat;
    background-size:cover;
+
  }
 
 .well{
@@ -66,4 +67,7 @@ background-color:silver;
   margin-left:120px;
   margin-right:120px;
   opacity:0.5;
+  }
+  .first{
+  color:white;
   }

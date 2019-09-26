@@ -1,32 +1,25 @@
 {{#partial "content"}}
-    <section class="landing-pg">
-        <div class="land-left">
-        </div>
-        <div class="land-right">
-        </div>
-
-        <div class="success">
-
+<div class="first">
+<h1>ALL SIGHTINGS</h1>
+<table class="table table-bordered">
+   <th scope="col">rangerName</th>
+   <th scope="col">location</th>
+   <th scope="col">animal_id</th>
 {{#if item}}
                {{#each item}}
+   <tr>
 
-                  <p>{{name}}</p>
-                  <p>{{health}}</p>
-                  <p>{{age}}</p>
-                  <p>{{endangered}}</p>
+       <td class="table-success">{{rangerName}}</td>
+       <td class="table-success">{{location}}</td>
+       <td class="table-success">{{animal_id}}</td>
 
+   </tr>
+{{/each}}
+{{else}}
+   <p>No animal is found</p>
+{{/if}}
+</table>
+</div>
 
-               {{/each}}
-
-
-           {{else}}
-              <p>no animals</p>
-           {{/if}}
-
-
-        </div>
-
-
-    </section>
 {{/partial}}
-{{> layout.hbs}}
+{{>layout.hbs}}

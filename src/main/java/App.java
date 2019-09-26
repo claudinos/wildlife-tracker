@@ -36,7 +36,12 @@ public class App {
            newAnimal.save();
             req.session().attribute("item",newAnimal);
             model.put("item",req.session().attribute("item"));
+            model.put("name", name);
+            model.put("health", health);
+            model.put("age", age);
+            model.put("endangered", endangered);
             System.out.println(newAnimal);
+            res.redirect("/list");
             return new ModelAndView(model,"success.hbs");
         }, new HandlebarsTemplateEngine());
 
@@ -66,8 +71,18 @@ public class App {
             newSightings .save();
             req.session().attribute("item",newSightings );
             model.put("item",req.session().attribute("item"));
+            model.put("animal_id", animal_id);
+            model.put("rangerName", rangerName);
+            model.put("location", location);
             System.out.println(newSightings );
             return new ModelAndView(model,"success.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/Sightings", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            List<Sightings> allSightings= Sightings.all();
+            model.put("allSightings", allSightings);
+            return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
     }
 
