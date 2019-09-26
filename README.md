@@ -20,13 +20,13 @@ This is an application  that helps the user to encrypt and decrypt  message usin
 ## BDD
 
 HOMEPAGE
-<img src="Images/homepage.png">
+<img src="images/homepage.png">
 Animal form 
-<img src="Images/animalform.png">
+<img src="images/animalform.png">
 Sighting form
-<img src="Images/sighting.png">
+<img src="images/sighting.png">
 Database
-<img src="Images/database.png">
+<img src="images/database.png">
 
 ## Support and contact details
 contact us on claudinos1990@gmail.com.
