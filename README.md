@@ -6,8 +6,8 @@
 
 ## Description
 
-This is an application  that helps the user to encrypt and decrypt  message using ceasar cipher method.
-
+This is an app to track wildlife sightings in a particular area.
+Tracks animal sightings with detail about animal, location. 
 ## SETUP INSTALLATION REQUIRED
     *UBUNTU
     *INTELLIJ
