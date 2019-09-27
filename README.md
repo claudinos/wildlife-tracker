@@ -20,13 +20,18 @@ Tracks animal sightings with detail about animal, location.
 ## BDD
 
 HOMEPAGE
-<img src="images/homepage.png">
+![](src/main/resources/public/images/homepage.png)
+
 Animal form 
-<img src="images/animalform.png">
+![](src/main/resources/public/images/animalform.png)
+
+
 Sighting form
-<img src="images/sighting.png">
+![](src/main/resources/public/images/sighting.png)
+
 Database
-<img src="images/database.png">
+![](src/main/resources/public/images/database.png)
+
 
 ## Support and contact details
 contact us on claudinos1990@gmail.com.
